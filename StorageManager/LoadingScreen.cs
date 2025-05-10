@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraSplashScreen;
+﻿using DevExpress.Mvvm;
+using DevExpress.XtraSplashScreen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

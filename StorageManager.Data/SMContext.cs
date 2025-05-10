@@ -17,6 +17,7 @@ namespace StorageManager.Data
         public DbSet<StorageArea> StorageAreas { get; set; }
         public DbSet<StorageBox> StorageBoxes { get; set; }
         public DbSet<StoredProduct> StoredProducts { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public SMContext() { }
 
@@ -118,6 +119,11 @@ namespace StorageManager.Data
                 entity.HasOne(s => s.Box)
                       .WithMany(b => b.Products)
                       .HasForeignKey(s => s.BoxId);
+            });
+
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasKey(s => s.Id);
             });
         }
     }

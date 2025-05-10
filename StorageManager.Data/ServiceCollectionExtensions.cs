@@ -24,7 +24,7 @@ namespace RecipeNotebook.Data
             );
 
             // Enregistrer les repositories
-            services.AddTransient<StorageRepository>();
+            services.AddTransient<ReferencesRepository>();
 
             return services;
         }

@@ -1,7 +1,21 @@
-﻿namespace StorageManager
+﻿using DevExpress.Mvvm;
+
+namespace StorageManager
 {
-    partial class LoadingScreen
+    partial class LoadingScreen: ISupportServices
     {
+        IServiceContainer serviceContainer = null;
+        protected IServiceContainer ServiceContainer
+        {
+            get
+            {
+                if (serviceContainer == null)
+                    serviceContainer = new ServiceContainer(this);
+                return serviceContainer;
+            }
+        }
+        IServiceContainer ISupportServices.ServiceContainer { get { return serviceContainer; } }
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
