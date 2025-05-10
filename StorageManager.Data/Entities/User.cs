@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,8 @@ namespace StorageManager.Data.Entities
     {
         STAFF,
         MANAGER,
-
+        ADMIN,
+        SUPERADMIN
     }
 
     public class User
@@ -19,8 +21,14 @@ namespace StorageManager.Data.Entities
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(50)]
         public string Username { get; set; }
+        [Required]
         public string PasswordHash { get; set; }
+
+        [Required]
+        public UserRole Role { get; set; }
 
         public DateTime CreationTime { get; set; }
     }

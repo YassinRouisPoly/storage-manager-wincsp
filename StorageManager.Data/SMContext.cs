@@ -38,7 +38,13 @@ namespace StorageManager.Data
         {
             //UTILISTEURS
 
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasKey(u => u.Id);
 
+                entity.Property(u => u.CreationTime)
+                      .HasDefaultValueSql("CURRENT_TIMESTAMP");
+            });
 
             // STOCKAGE
             modelBuilder.Entity<Category>(entity =>
