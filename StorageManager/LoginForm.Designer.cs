@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            usernameInput = new DevExpress.XtraEditors.TextEdit();
+            passwordInput = new DevExpress.XtraEditors.TextEdit();
             directxFormContainerControl1 = new DevExpress.XtraEditors.DirectXFormContainerControl();
+            errorLabel = new DevExpress.XtraEditors.LabelControl();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)pictureEdit1.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textEdit2.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)usernameInput.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passwordInput.Properties).BeginInit();
             directxFormContainerControl1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,34 +54,52 @@
             pictureEdit1.Size = new Size(452, 538);
             pictureEdit1.TabIndex = 0;
             // 
-            // textEdit1
+            // usernameInput
             // 
-            textEdit1.Location = new Point(497, 209);
-            textEdit1.Name = "textEdit1";
-            textEdit1.Size = new Size(313, 20);
-            textEdit1.TabIndex = 1;
-            textEdit1.ToolTip = "Nom d'utilisateur";
+            usernameInput.Location = new Point(497, 209);
+            usernameInput.Name = "usernameInput";
+            usernameInput.Size = new Size(313, 20);
+            usernameInput.TabIndex = 1;
+            usernameInput.ToolTip = "Nom d'utilisateur";
+            usernameInput.KeyPress += CheckEnterPressed_Username;
             // 
-            // textEdit2
+            // passwordInput
             // 
-            textEdit2.Location = new Point(497, 258);
-            textEdit2.Name = "textEdit2";
-            textEdit2.Properties.PasswordChar = '•';
-            textEdit2.Size = new Size(313, 20);
-            textEdit2.TabIndex = 2;
+            passwordInput.Location = new Point(497, 258);
+            passwordInput.Name = "passwordInput";
+            passwordInput.Properties.PasswordChar = '•';
+            passwordInput.Size = new Size(313, 20);
+            passwordInput.TabIndex = 2;
+            passwordInput.KeyPress += CheckEnterPressed_Password;
             // 
             // directxFormContainerControl1
             // 
+            directxFormContainerControl1.Controls.Add(errorLabel);
             directxFormContainerControl1.Controls.Add(labelControl3);
-            directxFormContainerControl1.Controls.Add(textEdit1);
+            directxFormContainerControl1.Controls.Add(usernameInput);
             directxFormContainerControl1.Controls.Add(simpleButton1);
             directxFormContainerControl1.Controls.Add(labelControl2);
             directxFormContainerControl1.Controls.Add(labelControl1);
-            directxFormContainerControl1.Controls.Add(textEdit2);
+            directxFormContainerControl1.Controls.Add(passwordInput);
             directxFormContainerControl1.Location = new Point(1, 31);
             directxFormContainerControl1.Name = "directxFormContainerControl1";
             directxFormContainerControl1.Size = new Size(850, 512);
             directxFormContainerControl1.TabIndex = 4;
+            // 
+            // errorLabel
+            // 
+            errorLabel.Appearance.Font = new Font("Montserrat Medium", 8.249999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            errorLabel.Appearance.ForeColor = Color.Red;
+            errorLabel.Appearance.Options.UseFont = true;
+            errorLabel.Appearance.Options.UseForeColor = true;
+            errorLabel.Appearance.Options.UseTextOptions = true;
+            errorLabel.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            errorLabel.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            errorLabel.Location = new Point(497, 142);
+            errorLabel.Name = "errorLabel";
+            errorLabel.Size = new Size(313, 15);
+            errorLabel.TabIndex = 6;
+            errorLabel.Text = "...";
             // 
             // labelControl3
             // 
@@ -103,6 +122,7 @@
             simpleButton1.Size = new Size(313, 23);
             simpleButton1.TabIndex = 3;
             simpleButton1.Text = "Se connecter";
+            simpleButton1.Click += simpleButton1_Click;
             // 
             // labelControl2
             // 
@@ -136,9 +156,11 @@
             MaximumSize = new Size(852, 544);
             MinimumSize = new Size(852, 544);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            this.Shown += this.OnShown;
             ((System.ComponentModel.ISupportInitialize)pictureEdit1.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textEdit2.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)usernameInput.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passwordInput.Properties).EndInit();
             directxFormContainerControl1.ResumeLayout(false);
             directxFormContainerControl1.PerformLayout();
             ResumeLayout(false);
@@ -147,12 +169,13 @@
         #endregion
 
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit usernameInput;
+        private DevExpress.XtraEditors.TextEdit passwordInput;
         private DevExpress.XtraEditors.DirectXFormContainerControl directxFormContainerControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl errorLabel;
     }
 }
