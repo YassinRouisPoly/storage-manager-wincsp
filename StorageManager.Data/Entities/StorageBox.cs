@@ -28,6 +28,6 @@ namespace StorageManager.Data.Entities
         [InverseProperty("Box")]
         public ICollection<StoredProduct> Products { get; set; }
 
-
+        public Category? FilterCategory { get; set; }
     }
 }

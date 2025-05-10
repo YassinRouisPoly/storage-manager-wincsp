@@ -20,5 +20,7 @@ namespace StorageManager.Data.Entities
 
         [InverseProperty("Area")]
         public ICollection<StorageBox> Boxes { get; set; }
+
+        public Category? FilterCategory { get; set; }
     }
 }
