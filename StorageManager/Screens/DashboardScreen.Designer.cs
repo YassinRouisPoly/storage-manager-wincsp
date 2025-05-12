@@ -37,22 +37,22 @@
             stockage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             Utilisateurs = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
+            createUserButton = new DevExpress.XtraEditors.SimpleButton();
             usersAccordion = new DevExpress.XtraBars.Navigation.AccordionControl();
             accordionControl_administrateurs = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControl_manager = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControl_staff = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            createUserButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)tabPane1).BeginInit();
             tabPane1.SuspendLayout();
             accueil.SuspendLayout();
             transferts.SuspendLayout();
             stockage.SuspendLayout();
             Utilisateurs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)usersAccordion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tablePanel2).BeginInit();
             tablePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)usersAccordion).BeginInit();
             SuspendLayout();
             // 
             // tabPane1
@@ -102,7 +102,7 @@
             transferts.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             transferts.Name = "transferts";
             transferts.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            transferts.Size = new Size(1201, 591);
+            transferts.Size = new Size(842, 513);
             // 
             // labelControl1
             // 
@@ -149,11 +149,33 @@
             Utilisateurs.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             Utilisateurs.Size = new Size(842, 513);
             // 
+            // tablePanel2
+            // 
+            tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] { new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5F) });
+            tablePanel2.Controls.Add(createUserButton);
+            tablePanel2.Controls.Add(usersAccordion);
+            tablePanel2.Location = new Point(209, 83);
+            tablePanel2.Name = "tablePanel2";
+            tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] { new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 26F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.AutoSize, 26F) });
+            tablePanel2.Size = new Size(433, 418);
+            tablePanel2.TabIndex = 4;
+            tablePanel2.UseSkinIndents = true;
+            // 
+            // createUserButton
+            // 
+            tablePanel2.SetColumn(createUserButton, 0);
+            createUserButton.Location = new Point(13, 389);
+            createUserButton.Name = "createUserButton";
+            tablePanel2.SetRow(createUserButton, 1);
+            createUserButton.Size = new Size(407, 16);
+            createUserButton.TabIndex = 4;
+            createUserButton.Text = "Créer un utilisateur";
+            // 
             // usersAccordion
             // 
             tablePanel2.SetColumn(usersAccordion, 0);
             usersAccordion.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControl_administrateurs, accordionControl_manager, accordionControl_staff });
-            usersAccordion.Location = new Point(13, 12);
+            usersAccordion.Location = new Point(13, 15);
             usersAccordion.Name = "usersAccordion";
             usersAccordion.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.False;
             tablePanel2.SetRow(usersAccordion, 0);
@@ -189,28 +211,6 @@
             labelControl3.TabIndex = 2;
             labelControl3.Text = "UTILISATEURS";
             // 
-            // tablePanel2
-            // 
-            tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] { new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5F) });
-            tablePanel2.Controls.Add(createUserButton);
-            tablePanel2.Controls.Add(usersAccordion);
-            tablePanel2.Location = new Point(209, 83);
-            tablePanel2.Name = "tablePanel2";
-            tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] { new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 26F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.AutoSize, 26F) });
-            tablePanel2.Size = new Size(433, 418);
-            tablePanel2.TabIndex = 4;
-            tablePanel2.UseSkinIndents = true;
-            // 
-            // createUserButton
-            // 
-            tablePanel2.SetColumn(createUserButton, 0);
-            createUserButton.Location = new Point(13, 382);
-            createUserButton.Name = "createUserButton";
-            tablePanel2.SetRow(createUserButton, 1);
-            createUserButton.Size = new Size(407, 23);
-            createUserButton.TabIndex = 4;
-            createUserButton.Text = "Créer un utilisateur";
-            // 
             // DashboardScreen
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -231,9 +231,9 @@
             stockage.PerformLayout();
             Utilisateurs.ResumeLayout(false);
             Utilisateurs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)usersAccordion).EndInit();
             ((System.ComponentModel.ISupportInitialize)tablePanel2).EndInit();
             tablePanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)usersAccordion).EndInit();
             ResumeLayout(false);
         }
 
