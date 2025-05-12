@@ -32,8 +32,7 @@ namespace StorageManager
 
             ServiceProvider = services.BuildServiceProvider();
 
-            var splash = ServiceProvider.GetRequiredService<LoadingScreen>();
-
+            var splash = ServiceProvider.GetRequiredService<DashboardScreen>();
 
             Application.Run(splash);
         }
@@ -41,7 +40,8 @@ namespace StorageManager
         public static void RegisterForms(this IServiceCollection services)
         {
             services.AddTransient<LoadingScreen>();
-            services.AddTransient<LoginForm>();
+            services.AddTransient<LoginScreen>();
+            services.AddTransient<DashboardScreen>();
         }
 
         public static void RegisterServices(this IServiceCollection services)

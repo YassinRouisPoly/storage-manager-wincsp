@@ -1,0 +1,23 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-4 -2 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Layer_1" transform="translate(-4, -2)" style="enable-background:new 0 0 32 32">
+    <g id="User">
+      <path d="M10, 9.9C9.9, 10.4 10.2, 10.8 10.4, 11.3C10.6, 11.8 10.3, 13 11.3, 12.9C11.3, 12.9 11.3, 13 11.3, 13.1C11.9, 15.4 13.3, 18 16, 18C18.7, 18 20.2, 15.4 20.7, 13.1C20.7, 13.1 20.7, 13 20.7, 13C21.7, 13.1 21.3, 11.9 21.6, 11.4C21.8, 10.9 22, 10.5 21.9, 10C21.8, 9.6 21.5, 9.6 21.4, 9.7C23.2, 4.8 20.3, 5 20.3, 5C20.3, 5 20, 2 14.8, 2C10, 2 9.4, 6 10.5, 9.6C10.4, 9.6 10.1, 9.7 10, 9.9z" fill="#FFFFFF" class="White" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-4, -2)" style="enable-background:new 0 0 32 32">
+    <g id="User">
+      <path d="M20, 18C19.2, 19.5 17.9, 22 16, 22C14.1, 22 12.8, 19.5 12, 18C9.7, 21.5 4, 19 4, 26.5L4, 30L28, 30L28, 26.5C28, 19.1 22.3, 21.4 20, 18z" fill="#FFFFFF" class="White" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(12, 14)" style="enable-background:new 0 0 16 16">
+    <g id="Settings">
+      <path d="M16, 9L16, 7L13.5, 6.4C13.4, 6 13.2, 5.6 13, 5.2L14.5, 3.1L12.9, 1.5L10.8, 3C10.4, 2.8 10, 2.6 9.6, 2.5L9, 0L7, 0L6.4, 2.5C6, 2.6 5.6, 2.8 5.2, 3L3.2, 1.5L1.5, 3.2L3, 5.2C2.8, 5.6 2.6, 6 2.5, 6.4L0, 7L0, 9L2.5, 9.6C2.6, 10 2.8, 10.4 3, 10.8L1.5, 12.9L3.1, 14.5L5.2, 13C5.6, 13.2 6, 13.4 6.4, 13.5L7, 16L9, 16L9.6, 13.5C10, 13.4 10.4, 13.2 10.8, 13L12.9, 14.5L14.5, 12.9L13, 10.8C13.2, 10.4 13.4, 10 13.5, 9.6L16, 9z" fill="#1177D7" style="fill:#D9D9D9" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(12, 14)" style="enable-background:new 0 0 16 16">
+    <g id="Settings">
+      <circle cx="8" cy="8" r="2" fill="#FFFFFF" class="White" />
+    </g>
+  </g>
+</svg>

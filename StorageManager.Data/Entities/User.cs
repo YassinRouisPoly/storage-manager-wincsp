@@ -26,6 +26,9 @@ namespace StorageManager.Data.Entities
         [MaxLength(50)]
         public string Username { get; set; }
         [Required]
+        [MaxLength(50)]
+        public string Fullname { get; set; }
+        [Required]
         public string PasswordHash { get; set; }
 
         [Required]
