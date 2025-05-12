@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Utils.Extensions;
+using DevExpress.XtraEditors;
+using StorageManager.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,22 +15,25 @@ namespace StorageManager.Screens.Popup
 {
     public partial class UserEdit : DevExpress.XtraEditors.XtraForm
     {
-        public UserEdit()
+        public UserEdit(User user, bool editMode = false)
         {
             InitializeComponent();
+            userBindingSource.DataSource = user;
+
+            comboBoxEdit1.Properties.Items.Clear();
+            comboBoxEdit1.Properties.Items.Add("SUPERADMIN");
+            comboBoxEdit1.Properties.Items.Add("ADMIN");
+            comboBoxEdit1.Properties.Items.Add("MANAGER");
+            comboBoxEdit1.Properties.Items.Add("STAFF");
+
+            if (!editMode)
+            {
+                titleLabel.Text = "Créer un utilisateur";
+                removeBtn.Hide();
+            }
         }
 
-        private void UserEdit_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl3_Click(object sender, EventArgs e)
+        private void removeBtn_Click(object sender, EventArgs e)
         {
 
         }

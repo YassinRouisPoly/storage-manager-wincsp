@@ -31,18 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardScreen));
             tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             accueil = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            xtraAccueil = new DevExpress.XtraEditors.XtraUserControl();
             labelControl4 = new DevExpress.XtraEditors.LabelControl();
             transferts = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            xtraTransferts = new DevExpress.XtraEditors.XtraUserControl();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             stockage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            xtraStockage = new DevExpress.XtraEditors.XtraUserControl();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             Utilisateurs = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            createUserButton = new DevExpress.XtraEditors.SimpleButton();
-            usersAccordion = new DevExpress.XtraBars.Navigation.AccordionControl();
-            accordionControl_administrateurs = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            accordionControl_manager = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            accordionControl_staff = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            xtraUtilisateurs = new DevExpress.XtraEditors.XtraUserControl();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)tabPane1).BeginInit();
             tabPane1.SuspendLayout();
@@ -50,37 +48,43 @@
             transferts.SuspendLayout();
             stockage.SuspendLayout();
             Utilisateurs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)tablePanel2).BeginInit();
-            tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)usersAccordion).BeginInit();
             SuspendLayout();
             // 
             // tabPane1
             // 
+            tabPane1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabPane1.Controls.Add(accueil);
             tabPane1.Controls.Add(transferts);
             tabPane1.Controls.Add(stockage);
             tabPane1.Controls.Add(Utilisateurs);
-            tabPane1.Dock = DockStyle.Fill;
             tabPane1.Location = new Point(0, 0);
             tabPane1.Name = "tabPane1";
             tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] { accueil, transferts, stockage, Utilisateurs });
-            tabPane1.RegularSize = new Size(842, 546);
+            tabPane1.RegularSize = new Size(1228, 666);
             tabPane1.SelectedPage = accueil;
-            tabPane1.Size = new Size(842, 546);
+            tabPane1.Size = new Size(1228, 666);
             tabPane1.TabIndex = 0;
             tabPane1.Text = "tabPane1";
             // 
             // accueil
             // 
             accueil.Caption = "Accueil";
+            accueil.Controls.Add(xtraAccueil);
             accueil.Controls.Add(labelControl4);
             accueil.ImageOptions.SvgImage = Properties.Resources.Home;
             accueil.ImageOptions.SvgImageSize = new Size(16, 16);
             accueil.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             accueil.Name = "accueil";
             accueil.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            accueil.Size = new Size(842, 513);
+            accueil.Size = new Size(1228, 633);
+            // 
+            // xtraAccueil
+            // 
+            xtraAccueil.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            xtraAccueil.Location = new Point(12, 83);
+            xtraAccueil.Name = "xtraAccueil";
+            xtraAccueil.Size = new Size(1204, 538);
+            xtraAccueil.TabIndex = 3;
             // 
             // labelControl4
             // 
@@ -96,13 +100,22 @@
             // transferts
             // 
             transferts.Caption = "Transferts";
+            transferts.Controls.Add(xtraTransferts);
             transferts.Controls.Add(labelControl1);
             transferts.ImageOptions.SvgImage = Properties.Resources.Transfers;
             transferts.ImageOptions.SvgImageSize = new Size(16, 16);
             transferts.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             transferts.Name = "transferts";
             transferts.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            transferts.Size = new Size(842, 513);
+            transferts.Size = new Size(1228, 633);
+            // 
+            // xtraTransferts
+            // 
+            xtraTransferts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            xtraTransferts.Location = new Point(12, 83);
+            xtraTransferts.Name = "xtraTransferts";
+            xtraTransferts.Size = new Size(1204, 538);
+            xtraTransferts.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -118,13 +131,22 @@
             // stockage
             // 
             stockage.Caption = "Stockage";
+            stockage.Controls.Add(xtraStockage);
             stockage.Controls.Add(labelControl2);
             stockage.ImageOptions.SvgImage = Properties.Resources.Storage;
             stockage.ImageOptions.SvgImageSize = new Size(16, 16);
             stockage.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             stockage.Name = "stockage";
             stockage.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            stockage.Size = new Size(842, 513);
+            stockage.Size = new Size(1228, 633);
+            // 
+            // xtraStockage
+            // 
+            xtraStockage.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            xtraStockage.Location = new Point(12, 83);
+            xtraStockage.Name = "xtraStockage";
+            xtraStockage.Size = new Size(1204, 538);
+            xtraStockage.TabIndex = 2;
             // 
             // labelControl2
             // 
@@ -140,65 +162,22 @@
             // Utilisateurs
             // 
             Utilisateurs.Caption = "Utilisateurs";
-            Utilisateurs.Controls.Add(tablePanel2);
+            Utilisateurs.Controls.Add(xtraUtilisateurs);
             Utilisateurs.Controls.Add(labelControl3);
             Utilisateurs.ImageOptions.SvgImage = Properties.Resources.Profile;
             Utilisateurs.ImageOptions.SvgImageSize = new Size(16, 16);
             Utilisateurs.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             Utilisateurs.Name = "Utilisateurs";
             Utilisateurs.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            Utilisateurs.Size = new Size(842, 513);
+            Utilisateurs.Size = new Size(1228, 633);
             // 
-            // tablePanel2
+            // xtraUtilisateurs
             // 
-            tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] { new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5F) });
-            tablePanel2.Controls.Add(createUserButton);
-            tablePanel2.Controls.Add(usersAccordion);
-            tablePanel2.Location = new Point(209, 83);
-            tablePanel2.Name = "tablePanel2";
-            tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] { new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 26F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.AutoSize, 26F) });
-            tablePanel2.Size = new Size(433, 418);
-            tablePanel2.TabIndex = 4;
-            tablePanel2.UseSkinIndents = true;
-            // 
-            // createUserButton
-            // 
-            tablePanel2.SetColumn(createUserButton, 0);
-            createUserButton.Location = new Point(13, 389);
-            createUserButton.Name = "createUserButton";
-            tablePanel2.SetRow(createUserButton, 1);
-            createUserButton.Size = new Size(407, 16);
-            createUserButton.TabIndex = 4;
-            createUserButton.Text = "Créer un utilisateur";
-            // 
-            // usersAccordion
-            // 
-            tablePanel2.SetColumn(usersAccordion, 0);
-            usersAccordion.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControl_administrateurs, accordionControl_manager, accordionControl_staff });
-            usersAccordion.Location = new Point(13, 15);
-            usersAccordion.Name = "usersAccordion";
-            usersAccordion.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.False;
-            tablePanel2.SetRow(usersAccordion, 0);
-            usersAccordion.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            usersAccordion.Size = new Size(407, 366);
-            usersAccordion.TabIndex = 3;
-            // 
-            // accordionControl_administrateurs
-            // 
-            accordionControl_administrateurs.Name = "accordionControl_administrateurs";
-            accordionControl_administrateurs.Text = "Administrateurs";
-            // 
-            // accordionControl_manager
-            // 
-            accordionControl_manager.Expanded = true;
-            accordionControl_manager.Name = "accordionControl_manager";
-            accordionControl_manager.Text = "Manager";
-            // 
-            // accordionControl_staff
-            // 
-            accordionControl_staff.Expanded = true;
-            accordionControl_staff.Name = "accordionControl_staff";
-            accordionControl_staff.Text = "Staff";
+            xtraUtilisateurs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            xtraUtilisateurs.Location = new Point(12, 83);
+            xtraUtilisateurs.Name = "xtraUtilisateurs";
+            xtraUtilisateurs.Size = new Size(1204, 538);
+            xtraUtilisateurs.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -215,7 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(842, 546);
+            ClientSize = new Size(1228, 666);
             Controls.Add(tabPane1);
             IconOptions.Icon = (Icon)resources.GetObject("DashboardScreen.IconOptions.Icon");
             Name = "DashboardScreen";
@@ -231,9 +210,6 @@
             stockage.PerformLayout();
             Utilisateurs.ResumeLayout(false);
             Utilisateurs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)tablePanel2).EndInit();
-            tablePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)usersAccordion).EndInit();
             ResumeLayout(false);
         }
 
@@ -252,14 +228,12 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.HtmlContentControl htmlContentControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControl usersAccordion;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControl_administrateurs;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControl_manager;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControl_staff;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
-        private DevExpress.Utils.Layout.TablePanel tablePanel2;
-        private DevExpress.XtraEditors.SimpleButton createUserButton;
+        private DevExpress.XtraEditors.XtraUserControl xtraTransferts;
+        private DevExpress.XtraEditors.XtraUserControl xtraStockage;
+        private DevExpress.XtraEditors.XtraUserControl xtraUtilisateurs;
+        private DevExpress.XtraEditors.XtraUserControl xtraAccueil;
     }
 }
