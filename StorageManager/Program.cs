@@ -32,7 +32,7 @@ namespace StorageManager
 
             ServiceProvider = services.BuildServiceProvider();
 
-            var splash = ServiceProvider.GetRequiredService<DashboardScreen>();
+            var splash = ServiceProvider.GetRequiredService<LoadingScreen>();
 
             Application.Run(splash);
         }

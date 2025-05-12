@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 
 namespace StorageManager.Data.Services
 {
@@ -14,8 +13,6 @@ namespace StorageManager.Data.Services
     {
         private User? loggedUser;
         private UsersRepository usersRepository;
-
-        private readonly PasswordHasher<string> _hasher = new();
 
 
         public AuthenticationService(IServiceProvider service)
@@ -34,9 +31,7 @@ namespace StorageManager.Data.Services
 
             if (user == null) return false;
 
-            var result = _hasher.VerifyHashedPassword(null, user.PasswordHash, password);
-
-            bool success = result == PasswordVerificationResult.Success;
+            var success = BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
 
             if (success)
             {
