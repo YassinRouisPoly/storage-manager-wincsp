@@ -31,7 +31,7 @@ namespace StorageManager
         {
             await Task.Delay(2000);
 
-            LoginForm form = new LoginForm();
+            LoginScreen form = new LoginScreen();
             form.Show();
             this.Hide();
 

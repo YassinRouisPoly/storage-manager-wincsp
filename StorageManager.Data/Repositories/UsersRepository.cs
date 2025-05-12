@@ -22,6 +22,13 @@ namespace StorageManager.Data.Repositories
             return _context.Users.ToList();
         }
 
+        public IEnumerable<User> GetAllByRole(UserRole role)
+        {
+            return _context.Users
+                .Where(u => u.Role == role)
+                .ToList();
+        }
+
         public void Add(User user)
         {
             _context.Users.Add(user);

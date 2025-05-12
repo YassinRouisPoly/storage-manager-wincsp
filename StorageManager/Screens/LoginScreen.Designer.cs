@@ -1,6 +1,6 @@
 ﻿namespace StorageManager
 {
-    partial class LoginForm
+    partial class LoginScreen
     {
         /// <summary>
         /// Required designer variable.

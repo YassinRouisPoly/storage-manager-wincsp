@@ -14,12 +14,12 @@ using System.Windows.Forms;
 
 namespace StorageManager
 {
-    public partial class LoginForm : DevExpress.XtraEditors.DirectXForm
+    public partial class LoginScreen : DevExpress.XtraEditors.DirectXForm
     {
         IServiceProvider serviceProvider;
         AuthenticationService authenticationService;
 
-        public LoginForm()
+        public LoginScreen()
         {
             InitializeComponent();
             serviceProvider = Program.ServiceProvider;
@@ -56,7 +56,9 @@ namespace StorageManager
             ShowInfo("Connexion en cours ...");
             if (authenticationService.Login(usernameInput.Text, passwordInput.Text))
             {
-                // TODO Go to Dashboard
+                var dashboard = serviceProvider.GetRequiredService<DashboardScreen>();
+                dashboard.Show();
+                this.Hide();
             }
             else
             {
