@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using StorageManager.Data;
 using StorageManager.Data.Repositories;
 
-namespace RecipeNotebook.Data
+namespace StorageManager.Data
 {
     public static class ServiceCollectionExtensions
     {

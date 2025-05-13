@@ -3,6 +3,10 @@ using StorageManager.Data.Entities;
 using StorageManager.Data.Repositories;
 using System;
 using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace StorageManager.Data.Services
 {
@@ -12,6 +16,7 @@ namespace StorageManager.Data.Services
         private readonly UsersRepository _usersRepository;
         private readonly LoggingService _loggingService;
         private readonly PasswordHasher<string> _hasher = new();
+
 
         public AuthenticationService(IServiceProvider service)
         {
@@ -41,18 +46,18 @@ namespace StorageManager.Data.Services
                 var result = _hasher.VerifyHashedPassword(null, user.PasswordHash, password);
                 bool success = result == PasswordVerificationResult.Success;
 
-                if (success)
-                {
+            if (success)
+            {
                     _loggedUser = user;
                     _loggingService.Log($"User logged in: {username}", LoggingService.LogLevel.Info);
                 }
                 else
                 {
                     _loggingService.Log($"Invalid password for user: {username}", LoggingService.LogLevel.Warning);
-                }
-
-                return success;
             }
+
+            return success;
+        }
             catch (Exception ex)
             {
                 _loggingService.Log($"Login failed for user: {username}. Error: {ex.Message}", LoggingService.LogLevel.Error);

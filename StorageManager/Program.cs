@@ -1,8 +1,7 @@
 using DevExpress.Mvvm.POCO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
-using RecipeNotebook;
-using RecipeNotebook.Data;
+using StorageManager.Data;
 using StorageManager.Data.Entities;
 using StorageManager.Data.Repositories;
 using StorageManager.Data.Services;
@@ -54,6 +53,7 @@ namespace StorageManager
             services.AddSingleton<AuthenticationService>();
             services.AddSingleton<LoggingService>();
             services.AddSingleton<BackupService>();
+            services.AddSingleton<AlertService>();
         }
 
         public static void RegisterRepositories(this IServiceCollection services)

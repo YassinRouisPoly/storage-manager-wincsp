@@ -13,17 +13,20 @@ namespace StorageManager.Data.Services
         private readonly CategoriesRepository _categoriesRepository;
         private readonly ReferencesRepository _referencesRepository;
         private readonly LoggingService _loggingService;
+        private readonly AlertService _alertService;
 
         public BackupService(
             UsersRepository usersRepository,
             CategoriesRepository categoriesRepository,
             ReferencesRepository referencesRepository,
-            LoggingService loggingService)
+            LoggingService loggingService,
+            AlertService alertService)
         {
             _usersRepository = usersRepository;
             _categoriesRepository = categoriesRepository;
             _referencesRepository = referencesRepository;
             _loggingService = loggingService;
+            _alertService = alertService;
         }
 
         public void CreateBackup(string backupDirectory = "Backups")
@@ -45,6 +48,7 @@ namespace StorageManager.Data.Services
                 File.WriteAllText(backupFilePath, json);
 
                 _loggingService.Log($"Backup created: {backupFilePath}", LoggingService.LogLevel.Info);
+                _alertService.ShowNotification(AlertService.BackupSuccessId);
             }
             catch (Exception ex)
             {
