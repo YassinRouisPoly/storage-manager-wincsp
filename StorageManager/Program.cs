@@ -54,6 +54,7 @@ namespace StorageManager
             services.AddSingleton<CategoriesRepository>();
             services.AddSingleton<ReferencesRepository>();
             services.AddSingleton<UsersRepository>();
+            services.AddSingleton<ProductTransferRepository>();
         }
     }
 }

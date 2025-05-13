@@ -38,11 +38,11 @@
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             Utilisateurs = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            createUserButton = new DevExpress.XtraEditors.SimpleButton();
             usersAccordion = new DevExpress.XtraBars.Navigation.AccordionControl();
             accordionControl_administrateurs = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControl_manager = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControl_staff = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            createUserButton = new DevExpress.XtraEditors.SimpleButton();
             labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)tabPane1).BeginInit();
             tabPane1.SuspendLayout();
@@ -63,11 +63,12 @@
             tabPane1.Controls.Add(Utilisateurs);
             tabPane1.Dock = DockStyle.Fill;
             tabPane1.Location = new Point(0, 0);
+            tabPane1.Margin = new Padding(4, 4, 4, 4);
             tabPane1.Name = "tabPane1";
             tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] { accueil, transferts, stockage, Utilisateurs });
-            tabPane1.RegularSize = new Size(842, 546);
+            tabPane1.RegularSize = new Size(982, 672);
             tabPane1.SelectedPage = accueil;
-            tabPane1.Size = new Size(842, 546);
+            tabPane1.Size = new Size(982, 672);
             tabPane1.TabIndex = 0;
             tabPane1.Text = "tabPane1";
             // 
@@ -78,18 +79,20 @@
             accueil.ImageOptions.SvgImage = Properties.Resources.Home;
             accueil.ImageOptions.SvgImageSize = new Size(16, 16);
             accueil.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
+            accueil.Margin = new Padding(4, 4, 4, 4);
             accueil.Name = "accueil";
             accueil.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            accueil.Size = new Size(842, 513);
+            accueil.Size = new Size(982, 631);
             // 
             // labelControl4
             // 
-            labelControl4.Appearance.Font = new Font("Montserrat SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelControl4.Appearance.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelControl4.Appearance.Options.UseFont = true;
             labelControl4.Location = new Point(0, 0);
+            labelControl4.Margin = new Padding(4, 4, 4, 4);
             labelControl4.Name = "labelControl4";
-            labelControl4.Padding = new Padding(20);
-            labelControl4.Size = new Size(164, 77);
+            labelControl4.Padding = new Padding(23, 25, 23, 25);
+            labelControl4.Size = new Size(203, 89);
             labelControl4.TabIndex = 2;
             labelControl4.Text = "ACCUEIL";
             // 
@@ -100,18 +103,20 @@
             transferts.ImageOptions.SvgImage = Properties.Resources.Transfers;
             transferts.ImageOptions.SvgImageSize = new Size(16, 16);
             transferts.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
+            transferts.Margin = new Padding(4, 4, 4, 4);
             transferts.Name = "transferts";
             transferts.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            transferts.Size = new Size(842, 513);
+            transferts.Size = new Size(982, 672);
             // 
             // labelControl1
             // 
-            labelControl1.Appearance.Font = new Font("Montserrat SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelControl1.Appearance.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelControl1.Appearance.Options.UseFont = true;
             labelControl1.Location = new Point(0, 0);
+            labelControl1.Margin = new Padding(4, 4, 4, 4);
             labelControl1.Name = "labelControl1";
-            labelControl1.Padding = new Padding(20);
-            labelControl1.Size = new Size(223, 77);
+            labelControl1.Padding = new Padding(23, 25, 23, 25);
+            labelControl1.Size = new Size(286, 89);
             labelControl1.TabIndex = 0;
             labelControl1.Text = "TRANSFERTS";
             // 
@@ -119,21 +124,22 @@
             // 
             stockage.Caption = "Stockage";
             stockage.Controls.Add(labelControl2);
-            stockage.ImageOptions.SvgImage = Properties.Resources.Storage;
             stockage.ImageOptions.SvgImageSize = new Size(16, 16);
             stockage.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
+            stockage.Margin = new Padding(4, 4, 4, 4);
             stockage.Name = "stockage";
             stockage.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            stockage.Size = new Size(842, 513);
+            stockage.Size = new Size(982, 631);
             // 
             // labelControl2
             // 
-            labelControl2.Appearance.Font = new Font("Montserrat SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelControl2.Appearance.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelControl2.Appearance.Options.UseFont = true;
             labelControl2.Location = new Point(0, 0);
+            labelControl2.Margin = new Padding(4, 4, 4, 4);
             labelControl2.Name = "labelControl2";
-            labelControl2.Padding = new Padding(20);
-            labelControl2.Size = new Size(195, 77);
+            labelControl2.Padding = new Padding(23, 25, 23, 25);
+            labelControl2.Size = new Size(244, 89);
             labelControl2.TabIndex = 1;
             labelControl2.Text = "STOCKAGE";
             // 
@@ -142,45 +148,37 @@
             Utilisateurs.Caption = "Utilisateurs";
             Utilisateurs.Controls.Add(tablePanel2);
             Utilisateurs.Controls.Add(labelControl3);
-            Utilisateurs.ImageOptions.SvgImage = Properties.Resources.Profile;
             Utilisateurs.ImageOptions.SvgImageSize = new Size(16, 16);
             Utilisateurs.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
+            Utilisateurs.Margin = new Padding(4, 4, 4, 4);
             Utilisateurs.Name = "Utilisateurs";
             Utilisateurs.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            Utilisateurs.Size = new Size(842, 513);
+            Utilisateurs.Size = new Size(982, 672);
             // 
             // tablePanel2
             // 
             tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] { new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5F) });
             tablePanel2.Controls.Add(createUserButton);
             tablePanel2.Controls.Add(usersAccordion);
-            tablePanel2.Location = new Point(209, 83);
+            tablePanel2.Location = new Point(244, 102);
+            tablePanel2.Margin = new Padding(4, 4, 4, 4);
             tablePanel2.Name = "tablePanel2";
             tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] { new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 26F), new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.AutoSize, 26F) });
-            tablePanel2.Size = new Size(433, 418);
+            tablePanel2.Size = new Size(505, 514);
             tablePanel2.TabIndex = 4;
             tablePanel2.UseSkinIndents = true;
-            // 
-            // createUserButton
-            // 
-            tablePanel2.SetColumn(createUserButton, 0);
-            createUserButton.Location = new Point(13, 389);
-            createUserButton.Name = "createUserButton";
-            tablePanel2.SetRow(createUserButton, 1);
-            createUserButton.Size = new Size(407, 16);
-            createUserButton.TabIndex = 4;
-            createUserButton.Text = "Créer un utilisateur";
             // 
             // usersAccordion
             // 
             tablePanel2.SetColumn(usersAccordion, 0);
             usersAccordion.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControl_administrateurs, accordionControl_manager, accordionControl_staff });
-            usersAccordion.Location = new Point(13, 15);
+            usersAccordion.Location = new Point(17, 20);
+            usersAccordion.Margin = new Padding(4, 4, 4, 4);
             usersAccordion.Name = "usersAccordion";
             usersAccordion.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.False;
             tablePanel2.SetRow(usersAccordion, 0);
             usersAccordion.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            usersAccordion.Size = new Size(407, 366);
+            usersAccordion.Size = new Size(471, 450);
             usersAccordion.TabIndex = 3;
             // 
             // accordionControl_administrateurs
@@ -200,24 +198,37 @@
             accordionControl_staff.Name = "accordionControl_staff";
             accordionControl_staff.Text = "Staff";
             // 
+            // createUserButton
+            // 
+            tablePanel2.SetColumn(createUserButton, 0);
+            createUserButton.Location = new Point(17, 482);
+            createUserButton.Margin = new Padding(4, 4, 4, 4);
+            createUserButton.Name = "createUserButton";
+            tablePanel2.SetRow(createUserButton, 1);
+            createUserButton.Size = new Size(471, 15);
+            createUserButton.TabIndex = 4;
+            createUserButton.Text = "Créer un utilisateur";
+            // 
             // labelControl3
             // 
-            labelControl3.Appearance.Font = new Font("Montserrat SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelControl3.Appearance.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelControl3.Appearance.Options.UseFont = true;
             labelControl3.Location = new Point(0, 0);
+            labelControl3.Margin = new Padding(4, 4, 4, 4);
             labelControl3.Name = "labelControl3";
-            labelControl3.Padding = new Padding(20);
-            labelControl3.Size = new Size(240, 77);
+            labelControl3.Padding = new Padding(23, 25, 23, 25);
+            labelControl3.Size = new Size(306, 89);
             labelControl3.TabIndex = 2;
             labelControl3.Text = "UTILISATEURS";
             // 
             // DashboardScreen
             // 
-            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(842, 546);
+            ClientSize = new Size(982, 672);
             Controls.Add(tabPane1);
             IconOptions.Icon = (Icon)resources.GetObject("DashboardScreen.IconOptions.Icon");
+            Margin = new Padding(4, 4, 4, 4);
             Name = "DashboardScreen";
             Text = "Storage Manager (v0.1)";
             Shown += DashboardScreen_Shown;
